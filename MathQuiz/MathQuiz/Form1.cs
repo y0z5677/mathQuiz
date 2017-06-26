@@ -97,6 +97,8 @@ namespace MathQuiz
                         txtOperant2.Text = dt.Rows[cnt].ItemArray.ElementAt(2).ToString();
 
                         txtAnswer.Text = dt.Rows[cnt].ItemArray.ElementAt(3).ToString();
+                        
+                        lblSummary.Text = "Problems number 1  of total " + dt.Rows.Count.ToString();
                     }
                 }
                 catch (Exception ex)
@@ -143,7 +145,7 @@ namespace MathQuiz
 
                     txtAnswer.Text = dt.Rows[cnt].ItemArray.ElementAt(3).ToString();
 
-                    lblSummary.Text = "Problems number  " + cnt.ToString() + " of total " + dt.Rows.Count.ToString();
+                    lblSummary.Text = "Problems number  " + (cnt+1).ToString() + " of total " + dt.Rows.Count.ToString();
                 }
                 else
                 {
